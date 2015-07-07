@@ -19,7 +19,35 @@ var spiritAnimalResults = [
   }
 ]
 
+// robyn = 1 // 7 (7 - 11)
+// lumberjack = 2 // 14 (12 - 16)
+// ann Shirley = 3 // 21 (17 - 22)
+// Dudley doright = 4 // 28 (23 - 28)
+
+
 $(document).ready(function() {
-  var inputs = $('.quiz-container').find('input')
-  console.log(inputs)
+
+  $('#spiritAnimalButton').on('click', function(){
+
+      var selectedInputs = $('.quiz-container').find('input:checked'),
+          valueArray = [],
+          totalValue = 0
+
+      selectedInputs.each(function(){
+        valueArray.push($(this).val())
+      })
+
+      $.each(valueArray, function(){
+        totalValue += parseInt(this);
+      })
+      if (totalValue <= 11) {
+        $('.quiz-container').append(spiritAnimalResults[0].description)
+      } else if (totalValue > 11 && totalValue <=16 ) {
+        $('.quiz-container').append(spiritAnimalResults[1].description)
+      } else if (totalValue > 16 && totalValue <= 22 ) {
+        $('.quiz-container').append(spiritAnimalResults[2].description)
+      } else {
+        $('.quiz-container').append(spiritAnimalResults[3].description)
+      }
+    })
 })
