@@ -1,0 +1,97 @@
+// variables
+$bodyBackground: #FBFFFF;
+$beaverRed: #CF2A2E;
+$lightBlue: #C7EEE9;
+$lessLightBlue: #8FCCCF;
+$txtOrange: #EA492D;
+$txtDarkBlue: #28575e;
+
+
+html {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: $txtOrange;
+  color: #fff;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: url('/images/crossword.png') repeat top left $bodyBackground;
+  font-family: Helvetica;
+  color: $txtDarkBlue;
+}
+
+svg, g, path, ellipse, circle {
+  fill: $beaverRed;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+
+.beaver-container{
+  display: flex;
+  .beaver{
+    margin: 0 auto;
+  }
+}
+
+.quiz-container {
+  width: 60%;
+  margin: 0 auto;
+}
+// much credit to this blog post for showing me a great way to customise my radio buttons http://codersblock.com/blog/checkbox-trickery-with-css/?utm_source=html5weekly&utm_medium=email
+input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+
+
+label {
+  display: block;
+  position: relative;
+  margin: 10px 0;
+  padding-left: 35px;
+  cursor: pointer;
+  color: $txtOrange;
+  font-size: 20px;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  &:after {
+    display: none;
+    width: 12px;
+    height: 12px;
+    margin: 4px;
+    background-color: $txtOrange;
+  }
+  &:before {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $txtOrange;
+  }
+}
+
+input:focus + label::before {
+  border-color: $txtOrange;
+}
+
+
+input[type="radio"] + label::before,
+input[type="radio"] + label::after {
+  border-radius: 50%;
+}
+
+input:checked + label::after {
+  display: block;
+}

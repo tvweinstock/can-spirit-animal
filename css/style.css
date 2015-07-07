@@ -1,0 +1,68 @@
+html {
+  box-sizing: border-box; }
+
+::selection {
+  background: #EA492D;
+  color: #fff; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  background: url("/images/crossword.png") repeat top left #FBFFFF;
+  font-family: Helvetica;
+  color: #28575e; }
+
+svg, g, path, ellipse, circle {
+  fill: #CF2A2E; }
+
+h2 {
+  font-size: 26px; }
+
+.beaver-container {
+  display: flex; }
+  .beaver-container .beaver {
+    margin: 0 auto; }
+
+.quiz-container {
+  width: 60%;
+  margin: 0 auto; }
+
+input[type="radio"] {
+  position: absolute;
+  left: -9999px; }
+
+label {
+  display: block;
+  position: relative;
+  margin: 10px 0;
+  padding-left: 35px;
+  cursor: pointer;
+  color: #EA492D;
+  font-size: 20px; }
+  label:before, label:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0; }
+  label:after {
+    display: none;
+    width: 12px;
+    height: 12px;
+    margin: 4px;
+    background-color: #EA492D; }
+  label:before {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #EA492D; }
+
+input:focus + label::before {
+  border-color: #EA492D; }
+
+input[type="radio"] + label::before,
+input[type="radio"] + label::after {
+  border-radius: 50%; }
+
+input:checked + label::after {
+  display: block; }
