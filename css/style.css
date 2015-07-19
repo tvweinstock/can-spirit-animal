@@ -19,10 +19,35 @@ svg, g, path, ellipse, circle {
 h2 {
   font-size: 26px; }
 
+button {
+  transition: all 0.1s;
+  font-size: 25px;
+  padding: 10px 40px;
+  background: #CF2A2E;
+  color: #fff;
+  text-shadow: 1px 1px 2px #ccc;
+  text-decoration: none;
+  margin: 5% 25%;
+  width: 50%;
+  border-radius: 15px;
+  border-bottom: 5px solid #ba2529; }
+
 .beaver-container {
   display: flex; }
   .beaver-container .beaver {
     margin: 0 auto; }
+
+.tail {
+  position: relative;
+  animation: wag 0.5s linear infinite;
+  animation-play-state: paused; }
+
+svg g:hover .tail {
+  animation-play-state: running; }
+
+@keyframes wag {
+  50% {
+    transform: rotate(2deg); } }
 
 .quiz-container {
   width: 60%;
