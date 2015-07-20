@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  background: url('/images/crossword.png') repeat top left $bodyBackground;
+  background: url('images/crossword.png') repeat top left $bodyBackground;
   font-family: Helvetica;
   color: $txtDarkBlue;
 }
@@ -130,7 +130,7 @@ input:checked + label::after {
 
 .result {
   text-align: center;
-  background: url('/images/leaf.svg'), linear-gradient($lightBlue, $lessLightBlue);
+  background: url('images/leaf.svg'), linear-gradient($lightBlue, $lessLightBlue);
   background-position: center;
   color: #fff;
   padding: 10px;
