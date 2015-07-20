@@ -9,7 +9,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: url("/images/crossword.png") repeat top left #FBFFFF;
+  background: url("images/crossword.png") repeat top left #FBFFFF;
   font-family: Helvetica;
   color: #28575e; }
 
@@ -97,7 +97,7 @@ input:checked + label::after {
 
 .result {
   text-align: center;
-  background: url("/images/leaf.svg"), linear-gradient(#C7EEE9, #8FCCCF);
+  background: url("images/leaf.svg"), linear-gradient(#C7EEE9, #8FCCCF);
   background-position: center;
   color: #fff;
   padding: 10px;
