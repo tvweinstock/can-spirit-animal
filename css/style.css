@@ -23,14 +23,17 @@ button {
   transition: all 0.1s;
   font-size: 25px;
   padding: 10px 40px;
-  background: #CF2A2E;
+  background: linear-gradient(#C7EEE9, #8FCCCF);
   color: #fff;
-  text-shadow: 1px 1px 2px #ccc;
+  text-shadow: 1px 1px 2px #000;
   text-decoration: none;
   margin: 5% 25%;
   width: 50%;
   border-radius: 15px;
-  border-bottom: 5px solid #ba2529; }
+  border: 2px solid #8FCCCF; }
+
+.disabled {
+  background: #ccc; }
 
 .beaver-container {
   display: flex; }
@@ -39,7 +42,7 @@ button {
 
 .tail {
   position: relative;
-  animation: wag 0.5s linear infinite;
+  animation: wag 0.4s linear infinite;
   animation-play-state: paused; }
 
 svg g:hover .tail {
@@ -91,3 +94,20 @@ input[type="radio"] + label::after {
 
 input:checked + label::after {
   display: block; }
+
+.result {
+  text-align: center;
+  background: url("/images/leaf.svg"), linear-gradient(#C7EEE9, #8FCCCF);
+  background-position: center;
+  color: #fff;
+  padding: 10px;
+  text-shadow: 1px 1px 2px #000;
+  border-radius: 15px;
+  border: 2px solid #8FCCCF; }
+  .result img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid #fff; }
+  .result p {
+    font-size: 20px; }
